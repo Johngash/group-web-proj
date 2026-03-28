@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechNova | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="./public/Technova-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <img src="./public/Technova-logo.png" alt="technova logo" class="nav-logo">
+    <!-- <div class="nav-brand">Tech<span>Nova</span></div> -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1><span class="accent">BUILDING</span><br />Experiences</h1>
+      <p class="hero-sub">A student tech group passionate about crafting modern, responsive, and accessible web
+        solutions using HTML, CSS & JavaScript.</p>
+      <div class="hero-btns">
+        <a href="services.html" class="btn btn-primary">Our Services</a>
+        <a href="about.html" class="btn btn-outline">Meet the Team</a>
+      </div>
+    </div>
+    <div class="hero-graphic">
+      <div class="blob"></div>
+      <div class="floating-card card1">HTML5</div>
+      <div class="floating-card card2">CSS3</div>
+      <div class="floating-card card3">JS</div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <section class="stats-strip">
+    <div class="stat"><span class="stat-num" data-target="4">0</span><span class="stat-label">Pages</span></div>
+    <div class="stat"><span class="stat-num" data-target="5">0</span><span class="stat-label">Team Members</span></div>
+    <div class="stat"><span class="stat-num" data-target="3">0</span><span class="stat-label">Technologies</span></div>
+    <div class="stat"><span class="stat-num" data-target="100">0</span><span class="stat-label">% Passion</span></div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <h2 class="section-title">What We Do</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-image-wrapper" style="grid-area: one;">
+          <img
+            src="https://imgs.search.brave.com/Ix_P1G1ZCdtL_87UibxuEoh6ONwst3BscPoxBRmJoAQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cGhvdG9zLXByZW1p/dW0vaW1hZ2UtdnVl/LWRlc3N1cy1lcXVp/cGUtZ3JhcGhpc3Rl/cy11eC11aS12b3Rh/bnQtcHJvdG90eXBl/LXBhcmZhaXQtbG9y/cy1yZXVuaW9uXzY3/MTU1LTQzMDM5Lmpw/Zz9zZW10PWFpc19p/bmNvbWluZyZ3PTc0/MCZxPTgw"
+            alt="Picture of peoples hands discussing ui/ux design">
+        </div>
+        <h3>UI Design</h3>
+        <p>Creating clean, user-friendly interfaces that look great on all devices.</p>
+      </div>
+      <div class="feature-card" style="grid-area: two;">
+        <div class="feature-image-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1624996752380-8ec242e0f85d?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="">
+        </div>
+        <h3>Web Development</h3>
+        <p>Building structured, semantic HTML pages with modern CSS layouts.</p>
+      </div>
+      <div class="feature-card" style="grid-area: three;">
+        <div class="feature-image-wrapper">
+          <img
+            src="https://imgs.search.brave.com/UnSmAIcWRnfoRpoQIEz2eblbv40nYdqpxMYHQyt50Qo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTE0/NjQxODA0MC9waG90/by9ndWktY29uY2Vw/dC1odWQuanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPVRNV2c2/U2lRZklvWFE5bGFi/UFNqeVQteEExcTYx/RjhPS1dQS01HV1FX/dGc9"
+            alt="">
+        </div>
+        <h3>Interactivity</h3>
+        <p>Adding dynamic behaviour and validation using vanilla JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2026 TechNova Group — Chuka University | ACSC 226</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

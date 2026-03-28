@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechNova | Contact</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <img src="./public/Technova-logo.png" alt="technova logo" class="nav-logo">
+    <!-- <div class="nav-brand">Tech<span>Nova</span></div> -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <h1>Get In <span class="accent">Touch</span></h1>
+    <p>Have a question or want to collaborate? Send us a message below.</p>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-wrapper">
+
+      <!-- CONTACT INFO -->
+      <div class="contact-info">
+        <h2>Contact Details</h2>
+        <div class="info-item">
+          <span class="info-icon">📍</span>
+          <div>
+            <strong>Location</strong>
+            <p>Chuka University, Tharaka-Nithi County, Kenya</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">📧</span>
+          <div>
+            <strong>Email</strong>
+            <p>technova.group@chuka.ac.ke</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">📱</span>
+          <div>
+            <strong>Phone</strong>
+            <p>+254 700 000 000</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">🕐</span>
+          <div>
+            <strong>Available</strong>
+            <p>Mon – Fri, 8:00 AM – 6:00 PM</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div class="contact-form-wrap">
+        <h2>Send a Message</h2>
+        <div id="contactForm">
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" placeholder="e.g. John Doe" />
+            <span class="error-msg" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" placeholder="e.g. john@email.com" />
+            <span class="error-msg" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <input type="text" id="subject" placeholder="What is this regarding?" />
+            <span class="error-msg" id="subjectError"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
+            <span class="error-msg" id="messageError"></span>
+          </div>
+          <button class="btn btn-primary" id="submitBtn" onclick="validateForm()">Send Message</button>
+          <div id="successMsg" class="success-msg" style="display:none;">
+            ✅ Message sent successfully! We'll get back to you soon.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 TechNova Group — Chuka University | ACSC 226</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
