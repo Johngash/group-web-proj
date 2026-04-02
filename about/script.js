@@ -1,6 +1,12 @@
 const teamGrid = document.querySelector('.team-grid');
 
-const TEAM_PLACEHOLDER_IMAGE = "https://plus.unsplash.com/premium_photo-1667030474693-6d0632f97029?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+const TEAM_PLACEHOLDER_IMAGE = [
+  "https://images.unsplash.com/photo-1700299926955-d68c16ba107b?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1543260775-945c562403b3?q=80&w=364&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://plus.unsplash.com/premium_photo-1667030474693-6d0632f97029?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=843&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+];
 
 const teamMembers = [
   {
@@ -53,7 +59,7 @@ const teamMembers = [
     name: "Stephanie Amondi",
     role: "Content & Testing",
     bio: "Ensures content quality and tests the system for reliability.",
-    image: null, // This will now use the placeholder image
+    image: "../public/steph.jpeg", // This will now use the placeholder image
     initials: "SA",
     color: "#457b9d",
     socials: {
@@ -101,7 +107,7 @@ const teamMembers = [
     name: "Lily Kamau",
     role: "UI/UX Researcher",
     bio: "Focuses on user experience and interface design improvements.",
-    image: null, // This will now use the placeholder image
+    image: "../public/lily.jpeg",
     initials: "LK",
     color: "#6d597a",
     socials: {
@@ -122,19 +128,6 @@ const teamMembers = [
       instagram: null,
       linkedin: null
     }
-  },
-  {
-    name: "Brian Machuka",
-    role: "Quality Assurance",
-    bio: "Tests and ensures the system meets quality standards.",
-    image: null, // This will now use the placeholder image
-    initials: "BM",
-    color: "#f4a261",
-    socials: {
-      github: "https://github.com/Ubuntu-kush",
-      instagram: null,
-      linkedin: null
-    }
   }
 ];
 
@@ -149,7 +142,7 @@ function createTeamCards() {
 
     let avatarHtml = '';
     // Use the member.image if available, otherwise use the placeholder
-    const imageUrl = member.image || TEAM_PLACEHOLDER_IMAGE;
+    const imageUrl = member.image || TEAM_PLACEHOLDER_IMAGE[Math.floor(Math.random() * 5)];
     avatarHtml = `
       <div class="avatar pfp">
         <img src="${imageUrl}" alt="${member.name}">
