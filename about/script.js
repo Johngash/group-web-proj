@@ -8,6 +8,8 @@ const TEAM_PLACEHOLDER_IMAGE = [
   "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?q=80&w=388&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 ];
 
+const cardYOffset = [-31, 13, -34, 53, -25, 75, 23, 75, 46, 54]
+
 const teamMembers = [
   {
     name: "Samwel Peter",
@@ -136,9 +138,10 @@ function createTeamCards() {
 
   teamGrid.innerHTML = '';
 
-  teamMembers.forEach(member => {
+  teamMembers.forEach((member, index) => {
     const card = document.createElement('div');
     card.className = 'team-card';
+    card.style.setProperty('--card-y-offset', `${cardYOffset[index]}px`);
 
     let avatarHtml = '';
     // Use the member.image if available, otherwise use the placeholder
@@ -174,3 +177,6 @@ function createTeamCards() {
 }
 
 document.addEventListener('DOMContentLoaded', createTeamCards);
+
+
+
